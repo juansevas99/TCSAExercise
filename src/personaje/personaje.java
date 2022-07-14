@@ -6,8 +6,9 @@ import TraitFactory.contruirNariz;
 import TraitFactory.contruirOjo;
 import funcionalidades.*;
 import traits.*;
+import java.util.ArrayList;
 public abstract class personaje {
-	
+	protected String nombre;
 	protected rasgo ojos;
 	protected rasgo nariz;
 	protected rasgo boca;
@@ -17,6 +18,8 @@ public abstract class personaje {
 	public caminar_tipo caminar;
 	public golpear_tipo golpear;
 	public hablar_tipo hablar;
+	
+	public static ArrayList<personaje> listaPersonajes= new  ArrayList<personaje>();
 	
 	public personaje () {
 		
@@ -89,5 +92,16 @@ public abstract class personaje {
 		this.golpear= golpear;
 	}
 	
+	public static ArrayList<personaje> getPersonajes() {
+		return listaPersonajes;
+	}
 
+	@Override
+	public String toString() {
+		return nombre ;
+	}
+	public void añadirPersonaje() {
+		
+	}
+	
 }

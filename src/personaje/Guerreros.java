@@ -9,6 +9,7 @@ import funcionalidades.hablar_informal;
 public class Guerreros  extends personaje{	
 	public Guerreros() {
 		super();
+		this.nombre="Guerreros";
 		
 		//rasgos de guerrro
 		TipoRasgo tipoBoca=new contruirBoca() ;
@@ -29,7 +30,17 @@ public class Guerreros  extends personaje{
 		this.caminar=new caminarRapido();
 		this.golpear= new golpearArma();
 		this.hablar= new hablar_informal();
+		
+		
+		
 	}
+	
+
+	@Override
+	public void añadirPersonaje() {
+		this.listaPersonajes.add(new Guerreros());
+	}
+	
 	
 	
 	

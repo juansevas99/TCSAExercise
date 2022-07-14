@@ -14,6 +14,8 @@ import funcionalidades.hablar_no;
 public class ciudadanos  extends personaje{
 	public ciudadanos() {
 		super();
+		
+		this.nombre="Cuidadanos";
 		TipoRasgo tipoBoca=new contruirBoca() ;
 		boca=tipoBoca.construirRasgo("pequena");
 		
@@ -28,6 +30,13 @@ public class ciudadanos  extends personaje{
 		this.caminar=new caminarLento();
 		this.golpear= new golpear_no();
 		this.hablar= new hablar_informal();
-
+		
+		// guardar Personaje
+		
+	}
+	
+	@Override
+	public void añadirPersonaje() {
+		this.listaPersonajes.add(new ciudadanos());
 	}
 }

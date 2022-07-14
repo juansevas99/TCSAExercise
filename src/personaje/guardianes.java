@@ -14,6 +14,8 @@ import funcionalidades.hablar_no;
 public class guardianes extends personaje {
 	public guardianes () {
 		super();
+		
+		this.nombre="Guardianes";
 		TipoRasgo tipoBoca=new contruirBoca() ;
 		boca=tipoBoca.construirRasgo("pequena");
 		
@@ -29,5 +31,14 @@ public class guardianes extends personaje {
 		this.caminar=new caminoMedio();
 		this.golpear= new golpear_limpio();
 		this.hablar= new hablar_no();
+		
+		// guardar personaje
+		
+	}
+	
+	
+	@Override
+	public void añadirPersonaje() {
+		this.listaPersonajes.add(new guardianes());
 	}
 }
