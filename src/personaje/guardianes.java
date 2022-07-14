@@ -4,6 +4,12 @@ import TraitFactory.TipoRasgo;
 import TraitFactory.contruirBoca;
 import TraitFactory.contruirNariz;
 import TraitFactory.contruirOjo;
+import funcionalidades.caminarRapido;
+import funcionalidades.caminoMedio;
+import funcionalidades.golpearArma;
+import funcionalidades.golpear_limpio;
+import funcionalidades.hablar_informal;
+import funcionalidades.hablar_no;
 
 public class guardianes extends personaje {
 	public guardianes () {
@@ -16,5 +22,12 @@ public class guardianes extends personaje {
 		
 		TipoRasgo tipoNariz=new contruirNariz() ;
 		nariz=tipoNariz.construirRasgo("punta");
+		
+		
+	// funcionalidades
+		
+		this.caminar=new caminoMedio();
+		this.golpear= new golpear_limpio();
+		this.hablar= new hablar_no();
 	}
 }

@@ -16,9 +16,11 @@ public abstract class personaje {
 	protected rasgo cabeza;
 	public caminar_tipo caminar;
 	public golpear_tipo golpear;
-	public hablar_tipo correr;
+	public hablar_tipo hablar;
 	
 	public personaje () {
+		
+		
 		
 	}
 	
@@ -65,14 +67,27 @@ public abstract class personaje {
 		return cabeza;
 	}
 
-	public caminar_tipo getCaminar() {
+	public caminar_tipo caminar() {
 		return caminar;
 	}
 
-	public hablar_tipo getCorrer() {
-		return correr;
+	public hablar_tipo hablar() {
+		return hablar;
+	}
+	public golpear_tipo golpear() {
+		return golpear;
 	}
 	
+	
+	public void set_hablar(hablar_tipo hablar) {
+		this.hablar= hablar;
+	}
+	public void set_caminar(caminar_tipo caminar) {
+		this.caminar= caminar;
+	}
+	public void set_golpear(golpear_tipo golpear) {
+		this.golpear= golpear;
+	}
 	
 
 }
